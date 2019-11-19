@@ -1,6 +1,10 @@
 body {
-    background: #606060;
+    background: #3a3a3a;
+    position: relative;
     width: 100vw;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -9,3 +13,198 @@ body {
     box-sizing: border-box;
 }
 
+h4 {
+    color: white;
+    font-size: 1.7rem;
+    margin-left: 4rem;
+}
+
+header {
+    width: 100vw;
+    height: 5rem;
+    background: #161616;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+#logo-container {width: 4rem;}
+
+/* ------------------------------------ timeline container */
+.timeline-container {
+    background: #212121;
+    width: 100vw;
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.top-box {
+    background: #161616;
+    width: inherit;
+    height: 2rem;
+    color: #a3a3a3;
+}
+
+.timeline-content {
+    width: 100vw;
+    height: 8rem;
+    display: inline-flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.timeline-content::-webkit-scrollbar {
+    visibility: hidden;  /* Safari and Chrome */
+}
+
+.horizontal-line {
+    background: #ff0062;
+    width: 100vw;
+    height: 0.2rem;
+    position: absolute;
+}
+
+.circles {
+    display: inherit;
+    flex-wrap: nowrap;
+    align-items: center;
+    z-index: 1;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background: #ff0062;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 40px;
+}
+
+.active-circle {
+    width: 80px;
+    height: 80px;
+    background: #1aff00;
+}
+
+.end-timeline {
+    width: 47vw;
+    height: 40px;
+}
+
+/* ---------------------------- modal */
+.data-container {
+    background: #212121;
+    width: 65rem;
+    height: 22rem;
+    margin: 8rem auto;
+}
+
+.data-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+            "img headline headline"
+            "img subhead song"
+            "img descript descript";
+}
+
+/*.test {*/
+/*    background: yellow;*/
+/*}*/
+
+.animated-image {
+    grid-area: img;
+    width: 100%;
+    height: 16rem;
+}
+
+.data-headline {
+    grid-area: headline;
+    width: 100%;
+    height: 4rem;
+    color: #009aff;
+}
+
+.data-subhead {
+    grid-area: subhead;
+    width: 100%;
+    height: 4rem;
+    color: #009aff;
+}
+
+.play-song-container {
+    grid-area: song;
+    width: 100%;
+    height: 4rem;
+}
+
+.data-description {
+    grid-area: descript;
+    width: 100%;
+    height: 4rem;
+    color: white;
+}
+
+#play-button-SVG, #progressDonut {
+    transform: scale(0.6);
+}
+
+.play-song-container {
+    display: flex;
+}
+
+/* -------------------------- music player and donut chart */
+.play-song-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donut-base {
+    stroke: #5126a3;
+}
+
+#donutFill {
+    stroke: #8652d0;
+    animation: donut 3s;
+}
+
+@keyframes donut {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+    100% {
+        stroke-dasharray: 100, 0;
+    }
+}
+
+.donut-text {
+    font-family: Arial, Helvetica, sans-serif;
+    fill: white;
+    font-size: 0.5em;
+    line-height: 1;
+    transform: translateY(0.5em);
+    font-weight: bold;
+}
+
+.donut {
+    width: 8rem;
+}
+
+/* ----------------------------------- play and stop btn */
+#playBtn {
+    width: 7rem;
+}
+
+#playBtn:hover {
+    cursor: pointer;
+}
+
+#stopMusic {
+    display: none;
+}

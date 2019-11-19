@@ -1,0 +1,19 @@
+<svg id="playBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.14 44.14">
+  <defs>
+    <style>
+      #playMusic {
+      stroke: #fff;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <title>play-button</title>
+  <circle fill="#ff0062" cx="22.07" cy="22.07" r="22.07"/>
+  <polygon  id="playMusic" fill="#fff" points="18.01 22.14 18.01 35.15 34.16 22.14 18.01 9.08 18.01 22.14"/>
+  <g id="stopMusic">
+    <rect fill="#fff" x="13.02" y="8.94" width="6.44" height="26.14" rx="3.22"/>
+    <rect fill="#fff" x="24.51" y="8.94" width="6.44" height="26.14" rx="3.22"/>
+  </g>
+</svg>
