@@ -97,21 +97,21 @@ function doRegisterHorizontalScroll() {
 
     // Source: https://codepen.io/anon/pen/rbzMwN
     timelineContent.addEventListener('wheel', function(e) {
-        if (e.deltaY > 0) timelineContent.scrollLeft += 60;
-        else timelineContent.scrollLeft -= 60;
+        if (e.deltaY > 0) timelineContent.scrollLeft += 50;
+        else timelineContent.scrollLeft -= 50;
 
 
         // ------------------------------ Source: https://codepen.io/vsync/pen/rwygwq
         getElementsInArea(e, {
             elements    : document.querySelectorAll('.circle'),
             markedClass : 'active-circle',
-            zone        : [25, 25] // percentage distance from top & bottom
+            zone        : [40, 40] // percentage distance from left & right
         });
 
         getElementsInArea(e, {
             elements    : document.querySelectorAll('.circle'),
-            markedClass : 'active-circle',
-            zone        : [40, 40] // percentage distance from top & bottom
+            markedClass : 'next-active-circle',
+            zone        : [86, 47] // percentage distance from left & right
         });
 
         // getElementsInArea(e, {
@@ -125,8 +125,8 @@ function doRegisterHorizontalScroll() {
 function doHandleCircleVisibility() {
     let options = {
         root: document.body,
-        rootMargin: '40px',
-        threshold: 1
+        rootMargin: '0px',
+        threshold: 0
     };
 
     let i = 0;
@@ -167,7 +167,7 @@ function doHighlightTimelineElements(elements) {
 
     nextCircles.left.classList.remove('active-circle');
     nextCircles.right.classList.remove('active-circle');
-    previouslySelectedID = middleCircleID
+    previouslySelectedID = middleCircleID;
     console.log(middleCircleID)
 }
 
@@ -222,7 +222,7 @@ const getElementsInArea = (function(docElm){
             elm.classList.toggle(opts.markedClass, inViewport);
 
             if( inViewport ) {
-                console.log(elm)
+                console.log(elm);
                 found.push(elm);
             }
         }

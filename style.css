@@ -80,13 +80,21 @@ header {
     cursor: pointer;
     text-align: center;
     font-size: 13px;
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 .active-circle {
+    width: 60px;
+    height: 60px;
+    background: #1affdd;
+    transition: 0.3s;
+}
+
+.next-active-circle {
     width: 80px;
     height: 80px;
     background: #1aff00;
+    transition: 0.3s;
 }
 
 .end-timeline {
