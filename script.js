@@ -4,6 +4,7 @@ let isMusicPlaying = false;
 const MusicPlayer = new Audio("./assets/intro.mp3");
 let MusicPlayerPercentageUpdater;
 let DBEntries = [];
+
 function doStart(){
     getData();
     loadSVG();
@@ -113,12 +114,6 @@ function doRegisterHorizontalScroll() {
             markedClass : 'next-active-circle',
             zone        : [86, 47] // percentage distance from left & right
         });
-
-        // getElementsInArea(e, {
-        //     elements    : document.querySelectorAll('.circle'),
-        //     markedClass : 'active-circle',
-        //     zone        : [40, 40] // percentage distance from top & bottom
-        // });
     });
 }
 

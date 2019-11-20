@@ -105,7 +105,8 @@ header {
 /* ---------------------------- modal */
 .data-container {
     background: #212121;
-    width: 65rem;
+    max-width: 65rem;
+    width: 100vw;
     height: 22rem;
     margin: 8rem auto;
 }
@@ -215,4 +216,57 @@ header {
 
 #stopMusic {
     display: none;
+}
+
+
+/* ----------------------------------- media queries */
+@media (max-width: 650px) {
+    .data-container {
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .data-content {
+        display: grid;
+        grid-template-columns: 10% auto 10%;
+        grid-template-rows: 20% 5% 15% 20% 30%;
+        grid-template-areas:
+                ". img ."
+                ". headline ."
+                ". subhead."
+                ". song ."
+                ". descript .";
+    }
+
+    #logo-container {
+        width: 2rem;
+    }
+
+    header {
+        height: 3rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+        margin-left: 2rem;
+    }
+
+    .timeline-container {
+        height: 8rem;
+    }
+
+    .timeline-content {
+        height: 7rem;
+    }
+     .data-img {
+         width: 6rem;
+     }
+
+    #play-button-SVG, #progressDonut {
+        transform: scale(0.5);
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
 }
