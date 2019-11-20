@@ -91,11 +91,11 @@ function calculatePercentage(currentSeconds, totalSeconds) {
 }
 
 
-///////////////////////////////////////////////////
-
+// ------------------------------------------------------  Timeline
 function doRegisterHorizontalScroll() {
     const timelineContent = document.getElementById('timeline-content');
 
+    // Source: https://codepen.io/anon/pen/rbzMwN
     timelineContent.addEventListener('wheel', function(e) {
         if (e.deltaY > 0) timelineContent.scrollLeft += 60;
         else timelineContent.scrollLeft -= 60;
