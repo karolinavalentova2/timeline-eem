@@ -4,6 +4,7 @@ let isMusicPlaying = false;
 const MusicPlayer = new Audio("./assets/intro.mp3");
 let MusicPlayerPercentageUpdater;
 let DBEntries = [];
+let middleCircleID;
 
 function doStart(){
     getData();
@@ -150,7 +151,7 @@ function doHighlightTimelineElements(elements) {
     console.log('Left: ' + lastVisibleLeftCircle + ' / Right: ' + lastVisibleRightCircle);
     console.log('Left visible: ' + elements[0].isVisible + ' / Right visible: ' + elements[1].isVisible);
 
-    const middleCircleID = lastVisibleRightCircle - 12;
+    middleCircleID = lastVisibleRightCircle - 12;
 
     const selectedCircleStyle = document.getElementById(String(middleCircleID));
     selectedCircleStyle.classList.add('active-circle');

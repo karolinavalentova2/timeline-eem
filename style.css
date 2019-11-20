@@ -42,7 +42,6 @@ header {
 .top-box {
     background: #161616;
     width: inherit;
-    max-width: 65rem;
     height: 2rem;
     color: #a3a3a3;
 }
@@ -104,6 +103,14 @@ header {
 }
 
 /* ---------------------------- modal */
+.top-box-modal {
+    background: #161616;
+    width: inherit;
+    max-width: 65rem;
+    height: 2rem;
+    color: #a3a3a3;
+}
+
 .data-container {
     background: #212121;
     max-width: 65rem;
